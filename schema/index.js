@@ -22,7 +22,7 @@ const GreetingSchema = new GraphQLObjectType({
                 id: { type: GraphQLID},
                 key: { type: new GraphQLNonNull(GraphQLString) }
             },
-            resolve: (obj, args, ctc) => {
+            resolve: (obj, args, ctx) => {
                 return {
                     id: args.id,
                     description: axios
